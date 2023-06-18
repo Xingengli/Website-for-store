@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xingeng's retail store</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>/*css for contactus form*/
+        body {
+            background-color:lightblue;
+            background-size: contain;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin-left: 50px;
+            text-align: center;
+            padding: 50px;
+            color: blueviolet;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .contact-form input[type=text],
+        .contact-form input[type=email],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+
+        .contact-form button[type=submit] {
+            background-color: red;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button[type=submit]:hover {
+            background-color: #1e1e1e;
+        }
+        .map {
+            float: right;
+            padding:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header><!--header and navigate bar, will be same for all the html files-->
+    <a href="Homepage.html"><img src="./images/logo.png" alt="logo" width="100"></a>
+    <h3 style="font-size:30px;">Xingeng's </h3>
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="Contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="map">
+        <iframe width="1000" height="1000" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJu8oXNbJMbDkRHVYbLDveBHI&key=AIzaSyB7nR1mbT0--BkKc9rs_Fa0eQF6tYc1kFI" allowfullscreen></iframe>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 Xingeng's Retail Store </p>
+    <p> Student ID: 19489195</p>
+    <p>All rights reserved by Xingeng</p>
+</footer>
+</body>
+</html>

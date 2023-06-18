@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xingeng's retail store</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>/*css for signup form*/
+    body {
+    background-color: lightblue;
+    background-size:cover;
+    }
+    form{
+        font-size:30px;
+        display:block;
+        margin-bottom:20px;
+    }
+    </style>
+</head>
+<body>
+
+<header><!--header and navigate bar, will be same for all the html files-->
+    <a href="Homepage.html"><img src="./images/logo.png" alt="logo" width="100"></a>
+    <h3 style="font-size:30px;">Xingeng's </h3>
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="Contactus.html">Contact Us</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Sign up</h1>
+    <form id="Sign up" method="post">
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">password:</label>
+        <input type="text" id="password" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="Sign up">Sign up</button>
+        <button type="Log in">Log in</button>
+    </form>
+    <!-- java script to restrict the signup form-->
+<script>
+        const form = document.getElementById('LoginForm');
+        const usernameInput = document.getElementById('username')
+        const passwordInput = document.getElementById('password')
+        const emailInput = document.getElementById('email')
+        const formError = document.getElementById('error')
+        form.addEventListener('submit', function(event) {
+            if (!usernameInput.value || !passwordInput.value || !emailInput.value) {
+                event.preventDefault();
+                alert('Please fill out all fields');
+            }
+            else if (!isValidEmail(emailInput.value)) {
+                event.preventDefault();
+                alert('Please enter a valid email address');
+            }
+            else {
+                formError.textContent = '';
+            }
+        });
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+
+</script>
+
+</main>
+<footer>
+    <p>&copy; 2023 Xingeng's Retail Store </p>
+    <p> Student ID: 19489195</p>
+    <p>All rights reserved by Xingeng</p>
+</footer>
+</body>
+</html>
